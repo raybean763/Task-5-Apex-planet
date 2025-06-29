@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background remains for contrast */
+    color: #E0E0E0; /* Slightly softer white for readability against brights */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1F1F1F; /* Slightly darker than body for depth */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Optional: Add a subtle gradient for more pop */
+    /* background: linear-gradient(90deg, #1F1F1F, #2A0A4A); */
+}
+
+header h1 {
+    /* Main brand color: A vibrant, electric blue or a hot pink */
+    color: #6A00FF; /* Electric Purple */
+    /* or color: #FF007F; /* Hot Pink */
+    /* or color: #00FFFF; /* Aqua */
+    font-size: 1.8rem;
+    text-shadow: 0 0 8px rgba(106, 0, 255, 0.7); /* Glow effect */
+}
+
+header select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #292929;
+    color: white;
+    border: 1px solid #6A00FF; /* Match border to new main color */
+    outline: none; /* Remove default outline */
+    transition: all 0.2s ease-in-out;
+}
+
+header select:focus {
+    box-shadow: 0 0 0 3px rgba(106, 0, 255, 0.5); /* Glow on focus */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    flex: 3;
+}
+
+.product {
+    background-color: #1E1E1E; /* Keep dark base for contrast */
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 1px solid #333; /* Subtle border for definition */
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    /* Dynamic glow on hover, combining primary and accent */
+    box-shadow: 0 4px 25px rgba(255, 0, 127, 0.5); /* Hot Pink Glow */
+    /* Optional: Slight background shift on hover for product cards */
+    background-color: #282828;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid #FF007F; /* Hot Pink border for images */
+}
+
+.product-info h3 {
+    color: #00FFFF; /* Aqua - a bright, energetic color */
+    /* or color: #FFD700; /* Gold */
+    /* or color: #39FF14; /* Electric Green */
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Subtle glow */
+}
+
+.product-info p {
+    color: #B0B0B0; /* Slightly lighter for secondary info */
+    margin-bottom: 0.5rem;
+}
+
+.product-info button {
+    padding: 0.75rem 1.25rem; /* Slightly larger for better clickability */
+    background-color: #FF007F; /* Hot Pink - a strong accent for CTAs */
+    border: none;
+    color: #121212; /* Dark text on bright button */
+    border-radius: 8px; /* Slightly more rounded */
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4); /* Button glow */
+}
+
+.product-info button:hover {
+    background-color: #E60072; /* Darker pink on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6); /* Enhanced glow */
+}
+
+.checkout {
+    flex: 1;
+    background-color: #1C1C1C; /* Dark background */
+    padding: 1.5rem; /* Slightly more padding */
+    border-radius: 12px;
+    max-width: 300px;
+    height: fit-content;
+    border: 1px solid #333; /* Subtle border */
+    /* Optional: Gradient background for checkout */
+    /* background: linear-gradient(135deg, #1C1C1C, #2C0C5C); */
+}
+
+.checkout h2 {
+    margin-bottom: 1rem;
+    color: #FFD700; /* Gold/Yellow for checkout heading - signifying value/completion */
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.6); /* Gold glow */
+}
+
+.checkout p {
+    margin-top: 0.5rem;
+    color: #C0C0C0; /* Lighter text for details */
+}
+
+footer {
+    background-color: #1F1F1F;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    color: #A0A0A0; /* Softer footer text */
+    border-top: 1px solid #292929;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .checkout {
+        max-width: 100%;
+    }
+}
+
+.buy-now {
+    margin-top: 1.5rem; /* More spacing */
+    width: 100%;
+    padding: 0.85rem; /* Larger button */
+    font-size: 1.1rem; /* Larger font */
+    background-color: #39FF14; /* Electric Green - strong, final CTA */
+    /* or background-color: #FF4500; /* Orange-Red for high urgency */
+    color: #121212;
+    border: none;
+    border-radius: 10px; /* More rounded */
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(57, 255, 20, 0.5); /* Electric green glow */
+}
+
+.buy-now:hover {
+    background-color: #2FE012; /* Darker electric green on hover */
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 8px 25px rgba(57, 255, 20, 0.7); /* Enhanced glow */
+}
+
+/* New additions for Dopamine/Hyperpop Feel */
+/* Subtle background particles or patterns could also enhance this */
+/* You might want to use SVG patterns or generated gradients for backgrounds */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(106, 0, 255, 0.1), transparent 50%),
+                radial-gradient(circle at bottom right, rgba(255, 0, 127, 0.1), transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+    animation: backgroundGlow 15s infinite alternate; /* Subtle animation */
+}
+
+@keyframes backgroundGlow {
+    0% {
+        background: radial-gradient(circle at top left, rgba(106, 0, 255, 0.1), transparent 50%),
+                    radial-gradient(circle at bottom right, rgba(255, 0, 127, 0.1), transparent 50%);
+    }
+    50% {
+        background: radial-gradient(circle at top right, rgba(0, 255, 255, 0.1), transparent 50%),
+                    radial-gradient(circle at bottom left, rgba(57, 255, 20, 0.1), transparent 50%);
+    }
+    100% {
+        background: radial-gradient(circle at top left, rgba(106, 0, 255, 0.1), transparent 50%),
+                    radial-gradient(circle at bottom right, rgba(255, 0, 127, 0.1), transparent 50%);
+    }
+}
